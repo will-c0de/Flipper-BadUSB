@@ -1,2 +1,2 @@
-Write-Output '$hi'
+Write-Output $hi
 Read-Host -Prompt 'press enter to exit'
