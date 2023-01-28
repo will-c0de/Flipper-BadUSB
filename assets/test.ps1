@@ -1,3 +1,3 @@
-$output = '$hi'
-Write-Output '$output'
+$output = $hi
+Write-Output $output
 Read-Host -Prompt 'press enter to exit'
