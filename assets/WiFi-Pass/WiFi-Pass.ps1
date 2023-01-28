@@ -1,4 +1,11 @@
 # Created by Will | @willsflipper
+# :::       ::: ::::::::::: :::        :::        
+# :+:       :+:     :+:     :+:        :+:        
+# +:+       +:+     +:+     +:+        +:+        
+# +#+  +:+  +#+     +#+     +#+        +#+        
+# +#+ +#+#+ +#+     +#+     +#+        +#+        
+#  #+#+# #+#+#      #+#     #+#        #+#        
+#   ###   ###   ########### ########## ##########
 
 $ssid = netsh wlan show interface | Select-String -Pattern ' SSID '
 $ssid = [string]$ssid
