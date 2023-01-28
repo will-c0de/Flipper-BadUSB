@@ -1,1 +1,1 @@
-start notepad
+start cmd
