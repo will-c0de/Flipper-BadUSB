@@ -10,7 +10,7 @@ REM +#+ +#+#+ +#+     +#+     +#+        +#+
 REM  #+#+# #+#+#      #+#     #+#        #+#        
 REM   ###   ###   ########### ########## ##########
 
-set "webhookUrl=https://discord.com/api/webhooks/1069011168993230930/cGeC4LkDJNsvyA6bUJ4leZUsdBkjjjm2eouS3CIgf7DMwh_MMjG3mWZKMpYP3-suKR4u"
+set "webhookUrl=%wh%"
 if "%webhookUrl%"=="" exit
 
 setlocal enabledelayedexpansion
